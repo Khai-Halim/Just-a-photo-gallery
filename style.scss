@@ -1,7 +1,8 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 /*** Classes ***/
-.container{max-width: 1000px; margin-left: auto; margin-right: auto; border: solid;}
+.center{display: flex; justify-content: center; align-items: center; text-align: center;}
+.container{max-width: 1000px; margin-left: auto; margin-right: auto;}
 .pd-top{padding-top: 1rem;}
 .wrapper-text{padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem;}
 .wrapper-pic{padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem;}
@@ -10,3 +11,76 @@
 //REM size for smaller screens
 @media (max-width: 700px){:root{font-size: 14px;}}
 @media (max-width: 500px){:root{font-size: 12px;}}
+
+.photo-gallery{
+
+}
+
+/*** ID's ***/
+
+#photo-gallery{
+    >div{
+        justify-content: center;
+         align-items: center;
+         border: solid;
+         height: 100px;
+    } 
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(4, 1fr);
+    //grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: 'img-1 img-2 img-3 img-4'
+                         'img-5 img-6 img-7 img-8';
+    @media (max-width: 700px){
+        grid-template-areas: 'img-1 img-1 img-2 img-2'
+                             'img-3 img-3 img-4 img-4'
+                             'img-5 img-5 img-6 img-6'
+                             'img-7 img-7 img-8 img-8';
+    }
+    @media (max-width: 500px){
+        grid-template-areas: 'img-1 img-1 img-1 img-1'
+                             'img-2 img-2 img-2 img-2'
+                             'img-3 img-3 img-3 img-3'
+                             'img-4 img-4 img-4 img-4'
+                             'img-5 img-5 img-5 img-5'
+                             'img-6 img-6 img-6 img-6'
+                             'img-7 img-7 img-7 img-7'
+                             'img-8 img-8 img-8 img-8';
+    }
+    // grid-auto-rows: 50px;
+    // grid-auto-flow: dense;
+    :nth-child(1){
+        grid-area: img-1;  
+        background: blue; 
+    }
+    :nth-child(2){
+        background: red;
+        grid-area: img-2; 
+    }
+    :nth-child(3){
+        background: green;
+        grid-area: img-3; 
+    }
+    :nth-child(4){
+        //grid-area: 'img-1';  
+        background: yellow; 
+        grid-area: img-4; 
+    }
+    :nth-child(5){
+        background: purple;
+        grid-area: img-5; 
+    }
+    :nth-child(6){
+        background: orange;
+        grid-area: img-6; 
+    }
+    :nth-child(7){
+        background: lightblue; 
+        grid-area: img-7; 
+    }
+    :nth-child(8){
+        background: pink;
+        grid-area: img-8; 
+    }
+}

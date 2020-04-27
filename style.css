@@ -6,11 +6,23 @@
 }
 
 /*** Classes ***/
+.center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
 .container {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  border: solid;
 }
 
 .pd-top {
@@ -47,5 +59,96 @@
   :root {
     font-size: 12px;
   }
+}
+
+/*** ID's ***/
+#photo-gallery {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 3px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: 'img-1 img-2 img-3 img-4' 'img-5 img-6 img-7 img-8';
+}
+
+#photo-gallery > div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: solid;
+  height: 100px;
+}
+
+@media (max-width: 700px) {
+  #photo-gallery {
+        grid-template-areas: 'img-1 img-1 img-2 img-2' 'img-3 img-3 img-4 img-4' 'img-5 img-5 img-6 img-6' 'img-7 img-7 img-8 img-8';
+  }
+}
+
+@media (max-width: 500px) {
+  #photo-gallery {
+        grid-template-areas: 'img-1 img-1 img-1 img-1' 'img-2 img-2 img-2 img-2' 'img-3 img-3 img-3 img-3' 'img-4 img-4 img-4 img-4' 'img-5 img-5 img-5 img-5' 'img-6 img-6 img-6 img-6' 'img-7 img-7 img-7 img-7' 'img-8 img-8 img-8 img-8';
+  }
+}
+
+#photo-gallery :nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: img-1;
+  background: blue;
+}
+
+#photo-gallery :nth-child(2) {
+  background: red;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: img-2;
+}
+
+#photo-gallery :nth-child(3) {
+  background: green;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: img-3;
+}
+
+#photo-gallery :nth-child(4) {
+  background: yellow;
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: img-4;
+}
+
+#photo-gallery :nth-child(5) {
+  background: purple;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: img-5;
+}
+
+#photo-gallery :nth-child(6) {
+  background: orange;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: img-6;
+}
+
+#photo-gallery :nth-child(7) {
+  background: lightblue;
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: img-7;
+}
+
+#photo-gallery :nth-child(8) {
+  background: pink;
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: img-8;
 }
 /*# sourceMappingURL=style.css.map */
