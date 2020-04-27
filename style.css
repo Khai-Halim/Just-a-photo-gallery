@@ -1,1 +1,51 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*** Classes ***/
+.container {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid;
+}
+
+.pd-top {
+  padding-top: 1rem;
+}
+
+.wrapper-text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.wrapper-pic {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+/*wrapper-pic MOBILE*/
+@media (max-width: 500px) {
+  .wrapper-pic {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    font-size: 12px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
