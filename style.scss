@@ -8,22 +8,27 @@
 .wrapper-pic{padding-left: 2rem; padding-right: 2rem; padding-bottom: 1rem;}
 /*wrapper-pic MOBILE*/ @media (max-width: 500px){.wrapper-pic{padding-left: 0; padding-right: 0;}}
 
+@mixin img-center {
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
 //REM size for smaller screens
 @media (max-width: 700px){:root{font-size: 14px;}}
 @media (max-width: 500px){:root{font-size: 12px;}}
 
-.photo-gallery{
 
-}
 
 /*** ID's ***/
 
 #photo-gallery{
     >div{
-        justify-content: center;
-         align-items: center;
-         border: solid;
          height: 100px;
+         
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
     } 
     display: grid;
     grid-gap: 3px;
@@ -52,35 +57,45 @@
     // grid-auto-flow: dense;
     :nth-child(1){
         grid-area: img-1;  
-        background: blue; 
+        background: url('images/pic-1.jpg'); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     :nth-child(2){
-        background: red;
         grid-area: img-2; 
+        background: url('images/pic-2.jpg'); 
+        @include img-center();
     }
     :nth-child(3){
-        background: green;
         grid-area: img-3; 
+        background: url('images/pic-3.jpg');
+        @include img-center(); 
     }
     :nth-child(4){
-        //grid-area: 'img-1';  
-        background: yellow; 
+        //grid-area: 'img-1';   
         grid-area: img-4; 
+        background: url('images/pic-4.jpg'); 
+        @include img-center();
     }
     :nth-child(5){
-        background: purple;
         grid-area: img-5; 
+        background: url('images/pic-5.jpg'); 
+        @include img-center();
     }
     :nth-child(6){
-        background: orange;
         grid-area: img-6; 
+        background: url('images/pic-6.jpg'); 
+        @include img-center();
     }
     :nth-child(7){
-        background: lightblue; 
         grid-area: img-7; 
+        background: url('images/pic-7.jpg'); 
+        @include img-center();
     }
     :nth-child(8){
-        background: pink;
         grid-area: img-8; 
+        background: url('images/pic-8.jpg'); 
+        @include img-center();
     }
 }
